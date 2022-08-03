@@ -32,11 +32,24 @@ class Rectangulos {
         <li>Área: ${this.a}</li>
     </ul>`);
   }
+
+  set modificarAlto(nuevoAlto) {
+    this.alto = nuevoAlto;
+  }
+
+  set modificarAncho(nuevoAncho) {
+    this.ancho = nuevoAncho;
+  }
 }
 
 let rectangulo = new Rectangulos();
 
 rectangulo.crear();
+rectangulo.perimetro(rectangulo.alto, rectangulo.ancho);
+rectangulo.area(rectangulo.alto, rectangulo.ancho);
+rectangulo.mostrar();
+rectangulo.modificarAlto = parseFloat(prompt("Ingrese valor nuevo de Alto"));
+rectangulo.modificarAncho = parseFloat(prompt("Ingrese valor nuevo de Ancho"));
 rectangulo.perimetro(rectangulo.alto, rectangulo.ancho);
 rectangulo.area(rectangulo.alto, rectangulo.ancho);
 rectangulo.mostrar();
